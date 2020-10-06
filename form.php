@@ -1,6 +1,7 @@
-<form action="">
+<?php require_once dirname(__FILE__).'/requestApiData.php' ?>
+<form action="#" method="POST">
     <label for="user-text">Enter your text:
-        <textarea name="userText" id="user-text" cols="30" rows="10"></textarea> 
+        <textarea name="userText" id="user-text" cols="30" rows="10" required></textarea> 
     </label>
     <label for="user-profanity-list">Enter your profanity words:
         <input type="text" name="userProfanityList" id="user-profanity-list">
@@ -17,3 +18,16 @@
     <input type="submit" value="Submit!">
 </form>
 
+<?php
+if ( isset($_POST['userText']) )
+{
+    
+    if ( $_POST['operation'] == "check")
+    {
+        checkForProfanity();   
+    }
+    elseif( $_POST['operation'] == "remove" )
+    {
+        removeProfanity();
+    }
+}
