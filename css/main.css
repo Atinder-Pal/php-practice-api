@@ -1,0 +1,24 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    text-align:center;
+    margin-top:3vh;
+    margin-bottom:3vh;
+}
+label {
+    display: block;
+    margin:1vh 0 3vh 3vh;
+}
+
+#submit {
+    margin:1vh 0 3vh 3vh;
+}
+
+form {
+    margin: 4vh auto;
+    width:70%;
+    border:0.2rem solid black;
+}
